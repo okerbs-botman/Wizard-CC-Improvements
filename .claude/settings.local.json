@@ -1,0 +1,49 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/check_csharp_rules.sh\""
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "mcp__botman-sql__list_tables",
+      "mcp__botman-sql__test_connection",
+      "mcp__botman-sql__describe_table",
+      "mcp__botman-sql__query",
+      "Bash(find \"C:\\\\Users\\\\okerbs\\\\Migracion\\\\AxCloud_RegistracionComprobantesIIBB\\\\AxCloud\\\\modules\\\\AxCloud.Modules.Iva\\\\Abm\\\\RegistracionComprobantesIIBB\" -type f -name \"*.cs\" | xargs grep -l \"Lookup\" 2>/dev/null)",
+      "Bash(xargs grep:*)",
+      "Bash(find c:/Users/okerbs/Migracion/AxCloud -path \"*/Abm/*\" -name \"*Abm.cs\" -exec grep -l \"SetEntityDomain\" {} ;)",
+      "Bash(grep -l \"SetRequiredExpression\\\\|SetValidExpression\" c:/Users/okerbs/Migracion/AxCloud/AxCloud/modules/AxCloud.Modules.*/Abm/*/*.cs)",
+      "Bash(find /c/Users/okerbs/Migracion/AxCloud/AxCloud/modules -name \"*.cs\" -type f -exec grep -l \"GetLookupField\" {} ;)",
+      "Bash(find /c/Users/okerbs/Migracion/AxCloud_RegistracionComprobantesIIBB/AxCloud/core -name \"*.cs\" -type f -exec grep -l \"class DataPagedDto\" {} ;)",
+      "Bash(find /c/Users/okerbs/Migracion/AxCloud_RegistracionComprobantesIIBB/AxCloud/modules -name \"*.ts\" -type f -exec grep -l \"lookupFields\\\\s*=\" {} ;)",
+      "Bash(find \"c:\\\\Users\\\\okerbs\\\\Migracion\\\\AxCloud_RegistracionComprobantesIIBB\\\\AxCloud\\\\model\\\\AxCloud.Model\\\\Domain\" -name \"*.cs\" -exec grep -l \"\\\\[OnlyUpperCase\\\\]\" {} ;)",
+      "Bash(find \"c:\\\\Users\\\\okerbs\\\\Migracion\\\\AxCloud\\\\AxCloud\\\\model\\\\AxCloud.Model\\\\Domain\" -name \"*.cs\" -exec grep -l \"\\\\[OnlyUpperCase\\\\]\" {} ;)",
+      "Bash(ls -d c:/Users/okerbs/Migracion/migration-support/extras/*/)",
+      "mcp__botman-sql__list_databases",
+      "Bash(python:*)",
+      "Bash(powershell:*)",
+      "Bash(pip show:*)",
+      "Bash(uv pip:*)",
+      "Bash(where botman-sql-mcp:*)",
+      "Bash(uv tool:*)",
+      "Bash(pipx list:*)",
+      "Bash(pipx install:*)",
+      "mcp__botman-sharepoint__list_sites",
+      "mcp__botman-sharepoint__list_drives",
+      "mcp__botman-sharepoint__list_files",
+      "mcp__botman-sharepoint__read_file",
+      "Bash(grep:*)",
+      "Bash(dotnet build:*)",
+      "Bash(dotnet test:*)"
+    ]
+  }
+}
